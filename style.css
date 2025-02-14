@@ -759,3 +759,83 @@ footer {
     background: var(--background-color);
     color: var(--text-color);
 }
+
+/* SEO Content Styles */
+.seo-content {
+    background: var(--background-color);
+    padding: 3rem 0;
+    margin-top: 2rem;
+}
+
+.seo-content .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.seo-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.seo-content h3 {
+    color: var(--secondary-color);
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.seo-content p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.seo-content ul, 
+.seo-content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.seo-content li {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+.faq-section {
+    margin-top: 3rem;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.faq-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.faq-item p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .seo-content {
+        padding: 2rem 0;
+    }
+    
+    .seo-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .seo-content h3 {
+        font-size: 1.25rem;
+    }
+}
