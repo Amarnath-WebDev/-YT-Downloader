@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fab fa-youtube"></i>
+                <span>YT Downloader</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Download YouTube Videos Easily</h1>
+                <p>Fast, free, and secure video downloads in the highest quality available</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="download-form">
+                <input type="text" id="videoUrl" placeholder="Enter YouTube URL">
+                <div class="quality-selector" id="qualitySelector" style="display: none;">
+                    <select id="videoQuality">
+                        <option value="best">Best Quality (Auto)</option>
+                    </select>
+                </div>
+                <button>
+                    <i class="fas fa-download"></i> <span id="buttonText">Get Qualities</span>
+                </button>
+            </div>
+            <div id="status" class="status"></div>
+            <div id="statusMessage" class="status-message" style="display: none;">
+                <i class="fas fa-hand-point-down"></i>
+                Select quality and click download
+            </div>
+            <div class="download-progress" id="downloadProgress" style="display: none;">
+                <div class="progress-container">
+                    <div class="loader"></div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <div class="progress-percentage" id="progressPercentage">0%</div>
+                    </div>
+                    <div class="progress-text">
+                        <h3>Downloading Video</h3>
+                        <p id="downloadStatus">Starting download...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-info" id="videoInfo" style="display: none;">
+                <div class="video-details">
+                    <img id="thumbnailImg" src="" alt="Video thumbnail">
+                    <div class="video-text">
+                        <h3 id="videoTitle"></h3>
+                        <p id="videoDuration"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="download-complete" id="downloadComplete" style="display: none;">
+                <div class="success-animation">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Download Complete!</h3>
+                <p id="downloadStats"></p>
+            </div>
+            <div class="url-preview-animation" id="urlPreviewAnimation" style="display: none;">
+                <div class="wave-container">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
+                <p>Analyzing URL...</p>
+            </div>
+            <div class="quality-loading" id="qualityLoading" style="display: none;">
+                <div class="circular-loader">
+                    <div class="loader-path"></div>
+                    <div class="loader-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                </div>
+                <div class="loading-text">
+                    <h3>Fetching Available Qualities</h3>
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Lightning Fast</h3>
+                <p>Download videos at maximum speed</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure</h3>
+                <p>Safe and private downloads</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-video"></i>
+                <h3>High Quality</h3>
+                <p>Best available video quality</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>A free tool to download YouTube videos easily and securely.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 YT Downloader. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
