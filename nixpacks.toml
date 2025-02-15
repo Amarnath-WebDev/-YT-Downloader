@@ -1,7 +1,7 @@
-[[phases.setup]]
-aptPkgs = ["python3", "python3-pip"]
+[phases.setup]
+aptPkgs = "python3 python3-pip"
 
-[[phases.build]]
+[phases.build]
 cmds = ["npm ci"]
 
 [start]
