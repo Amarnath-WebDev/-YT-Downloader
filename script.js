@@ -1,15 +1,12 @@
 async function getVideoInfo(url) {
-  try {
-    const response = await fetch(
-      "https://yt-downloader-a0kq.onrender.com/video-info",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ url }),
-      }
-    );
+    try {
+        const response = await fetch('http://localhost:3000/video-info', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ url })
+        });
 
     if (!response.ok) {
       throw new Error("Failed to fetch video info");
@@ -298,17 +295,17 @@ document.getElementById("videoUrl").addEventListener("paste", async (e) => {
   videoInfo.style.display = "none";
   qualitySelector.style.display = "none";
 
-  // Wait for the paste to complete
-  setTimeout(async () => {
-    const pastedUrl = urlInput.value;
-    if (pastedUrl) {
-      try {
-        // Show loading animation for at least 1 second for better UX
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        await showVideoQualities();
-      } finally {
-        urlPreviewAnimation.style.display = "none";
-      }
-    }
-  }, 0);
-});
+    // Wait for the paste to complete
+    setTimeout(async () => {
+        const pastedUrl = urlInput.value;
+        if (pastedUrl) {
+            try {
+                // Show loading animation for at least 1 second for better UX
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                await showVideoQualities();
+            } finally {
+                urlPreviewAnimation.style.display = 'none';
+            }
+        }
+    }, 0);
+}); 
