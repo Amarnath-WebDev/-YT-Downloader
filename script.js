@@ -1,6 +1,6 @@
 async function getVideoInfo(url) {
     try {
-        const response = await fetch('http://localhost:3000/video-info', {
+        const response = await fetch('https://yt-downloader-a0kq.onrender.com/video-info', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
